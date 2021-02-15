@@ -47,9 +47,13 @@ class ReactRouterGA extends React.Component<Props> {
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
     // Initialize Google Analytics
-    window.ga('create', this.props.id, 'auto', { allowLinker: true });
-    window.ga('require', 'linker');
-    window.ga('linker:autoLink', this.props.domains);
+    if(this.props.domains && this.props.domains.length > 0) {
+      window.ga('create', this.props.id, 'auto', { allowLinker: true });
+      window.ga('require', 'linker');
+      window.ga('linker:autoLink', this.props.domains);
+    } else {
+      window.ga('create', this.props.id, 'auto');
+    }
   }
 
   sendPageView(location: Location) {
