@@ -1,11 +1,11 @@
 {
-  "name": "react-router-ga",
+  "name": "@PrototypeInteractive/react-router-ga",
   "version": "1.2.3",
   "main": "lib/index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fknussel/react-router-ga.git"
+    "url": "git+https://github.com/PrototypeInteractive/react-router-ga.git"
   },
   "author": {
     "name": "Federico Knüssel",
@@ -34,5 +34,8 @@
   "peerDependencies": {
     "react": "^16.8.6",
     "react-router-dom": "^5.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
